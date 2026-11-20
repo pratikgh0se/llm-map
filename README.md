@@ -8,7 +8,7 @@ This tool came from [lossless-handoff](https://github.com/pratikgh0se/lossless-h
 
 ## Honest result
 
-I tested it on OOLONG, a benchmark of large aggregation tasks. There were 400 tasks. Arm C (Claude Code with llm_map and its skill) scored 0.731. Plain Claude Code scored 0.711. Plain Claude Code with a hint to use a subagent scored 0.730. This is no measurable gain. The cost was about equal. In the arm C runs, 199 of 206 llm_map calls succeeded.
+I tested it on OOLONG, a benchmark of large aggregation tasks (one run, 2026-11-18, 400 tasks per arm). Arm C (Lossless Handoff with llm_map and its skill) scored 0.731. Plain Claude Code scored 0.711. Plain Claude Code with a hint to use a subagent scored 0.730. This is no measurable gain. The cost was about equal. In the arm C runs, 199 of 206 llm_map calls succeeded. The harness flagged the run for shared-temp use (2.2% of units); the result is a tie on every cleaned task set. Full numbers: [run-20261118T221353-summary.md](https://github.com/pratikgh0se/lossless-handoff/blob/main/bench/oolong/evidence/run-20261118T221353-summary.md).
 
 Use it for the reason below, not because it raises a benchmark score.
 
